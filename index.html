@@ -453,8 +453,92 @@
   }
   .card:hover{background:rgba(248,245,239,.98) !important;}
 
-  @media(max-width:640px){
+  
+  /* Footer återställd som en tydlig svart avslutande list. */
+  footer{
+    position:relative !important;
+    width:100vw !important;
+    margin-left:calc(50% - 50vw) !important;
+    background:#0d0d0d !important;
+    color:#f5f0e8 !important;
+    padding:0 !important;
+    border-top:1px solid rgba(183,146,74,.32) !important;
+    box-shadow:0 -10px 28px rgba(0,0,0,.12) !important;
+    overflow:hidden !important;
+  }
+  footer::before{
+    content:'' !important;
+    position:absolute !important;
+    inset:0 !important;
+    background:
+      repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,.025) 39px,rgba(255,255,255,.025) 40px),
+      radial-gradient(circle at 80% 20%,rgba(183,146,74,.08),transparent 36%) !important;
+    pointer-events:none !important;
+  }
+  .footer-inner{
+    position:relative !important;
+    z-index:1 !important;
+    max-width:1100px !important;
+    margin:0 auto !important;
+    padding:28px 48px 10px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    flex-wrap:wrap !important;
+    gap:16px !important;
+  }
+  .footer-brand{
+    font-family:'IBM Plex Mono',monospace !important;
+    font-size:10px !important;
+    letter-spacing:.2em !important;
+    text-transform:uppercase !important;
+    color:var(--gold-lt) !important;
+  }
+  .footer-note{
+    font-size:11px !important;
+    color:rgba(245,240,232,.62) !important;
+  }
+  .footer-note a{
+    color:var(--gold-lt) !important;
+    text-decoration:none !important;
+  }
+  .footer-disc{
+    position:relative !important;
+    z-index:1 !important;
+    max-width:1100px !important;
+    margin:0 auto !important;
+    padding:12px 48px 30px !important;
+    font-size:10.5px !important;
+    color:rgba(245,240,232,.48) !important;
+    line-height:1.65 !important;
+  }
+
+  /* Starkare kontrast i den svarta hero-panelen. */
+  .hero-copy{
+    background:rgba(0,0,0,.72) !important;
+    border:1px solid rgba(183,146,74,.36) !important;
+    border-left:3px solid rgba(183,146,74,.62) !important;
+    box-shadow:0 18px 60px rgba(0,0,0,.62) !important;
+  }
+  .hero-copy h1,
+  .hero-copy h1 em,
+  .hero-copy .hero-lead,
+  .hero-copy .hero-kicker{
+    text-shadow:0 2px 14px rgba(0,0,0,.88) !important;
+  }
+  .hero-copy h1{color:#fffaf0 !important;}
+  .hero-copy .hero-lead{color:rgba(255,250,240,.91) !important;}
+  .hero-copy .hero-kicker{color:#d4a96a !important;}
+  .osint-tag{
+    background:rgba(0,0,0,.72) !important;
+    border-color:rgba(183,146,74,.72) !important;
+    color:#e2bd77 !important;
+  }
+
+@media(max-width:640px){
     section.dom{padding:46px 20px 64px !important;}
+    .footer-inner{padding-left:20px !important;padding-right:20px !important;}
+    .footer-disc{padding-left:20px !important;padding-right:20px !important;}
     .dom-head{grid-template-columns:1fr !important;padding:26px 24px !important;}
     .dom-letter{display:none !important;}
     .hero-copy{padding:18px 20px !important;}
